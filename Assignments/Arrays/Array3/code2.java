@@ -24,20 +24,26 @@ class code2{
 
 		int num = sc.nextInt();
 
+		
+		int flag = 0;
 		for(int i = 0 ; i<arr.length ; i++){
 		
-		
-		
-
-		
+			if(arr[i] == num){
+				System.out.println("Number " + num + " first occurred at index : " + i );
+				flag = 1;
+				break;
+			
+			
+			}
+			
 		
 		}
-	
-	
-	
+
+		if(flag!=1){
+		
+			System.out.println("Number " + num + " not found in the array ");
+		}
+		
 	}
-
-
-
 
 }
