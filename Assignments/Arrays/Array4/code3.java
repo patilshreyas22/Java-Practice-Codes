@@ -1,60 +1,55 @@
-import java.util.Scanner;
+import java.util.*;
 
-class code3 {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
+class code4{
 
-        // Read the size of the array
-        int size = sc.nextInt();
-        int arr[] = new int[size];
+	public static void main(String args []){
+	
+		Scanner sc = new Scanner(System.in);
 
-        // Populate the array with input values
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = sc.nextInt();
-        }
+		int size = sc.nextInt();
 
-        // Ensure the array has at least two elements
-        if (size < 2) {
-            System.out.println("Array needs at least two elements.");
-            return;
-        }
+		int [] arr = new int [size];
 
-        // Initialize max and secondMax
-        int max = arr[0];
-        int secondMax = arr[0];
+		for(int i = 0 ; i<arr.length ; i++){
+		
+			arr[i] = sc.nextInt();
+		
+		}
+		
+		int max = arr[0];
+		int max2 = arr[0];
+		for(int i = 0 ; i<arr.length ; i++){
+		
+		
+			if(arr[i] > max){
+			
+				max = arr[i];
+			}
+		
+		}
 
-        // Traverse the array to find max
-        for (int i = 1; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-        }
+		boolean max2found = false;
+		for(int i = 0 ; i<arr.length ; i++){
+		if(arr[i] != max){
+		
+			max2 = arr[i];
+			max2found = true;
+			break;
+		}
+		}
 
-        // Initialize secondMax to something that is guaranteed to be less than max
-        boolean foundSecondMax = false;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != max) {
-                secondMax = arr[i];
-                foundSecondMax = true;
-                break;
-            }
-        }
+		for(int i = 0 ; i<arr.length ; i++){
+		
+			if(arr[i] > max2 && arr[i] < max){
+			
+				max2 = arr[i];
+			}
+		
+		}
 
-        // If no second max found, all elements are the same
-        if (!foundSecondMax) {
-            System.out.println("There is no second largest element.");
-            return;
-        }
+		System.out.println(max2);
+	
+	}
 
-        // Traverse the array to find secondMax
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > secondMax && arr[i] < max) {
-                secondMax = arr[i];
-            }
-        }
 
-        // Print the second largest element
-        System.out.println("Second largest element: " + secondMax);
-    }
 }
-
