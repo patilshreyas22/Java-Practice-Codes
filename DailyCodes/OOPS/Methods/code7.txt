@@ -1,0 +1,15 @@
+bytecode will come first into the method area 
+
+there will be two bytecodes as there are two classes 
+
+each class will have its own bytecode
+
+now static blocks will come into the picture
+
+in the static blocks there will be static variables initialized 
+
+then special structures will come into the picture 
+
+static blocks comes in picture only when there is explicitly you have written static variable or static block 
+
+from inside the main we can access the static data of that same class only 
