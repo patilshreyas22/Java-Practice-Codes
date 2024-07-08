@@ -1,23 +1,25 @@
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class App extends Application {
+public class App extends Application implements EventHandler<ActionEvent>{
 
     Text t;
     RadioButton r1, r2, r3;
     CheckBox c1, c2, c3;
     ChoiceBox<Integer> cb;
-    FontWeight fw = FontWeight.NORMAL;
-    FontPosture fp = FontPosture.REGULAR;
+    
 
     public void start(Stage stage) throws Exception {
 
@@ -56,34 +58,46 @@ public class App extends Application {
         vb.getChildren().addAll(hb, hb1, hb2, cb);
         vb.setPadding(new Insets(10, 10, 10, 10));
 
-        r1.setOnAction(e -> vb.setStyle("-fx-background-color: red;"));
-        r2.setOnAction(e -> vb.setStyle("-fx-background-color: green;"));
-        r3.setOnAction(e -> vb.setStyle("-fx-background-color: blue;"));
+        r1.setOnAction(this);
+        r2.setOnAction(this);
+        r3.setOnAction(this);
+        c1.setOnAction(this);
+        c2.setOnAction(this);
+        c1.setOnAction(this);
+        cb.setOnAction(this);
 
-        c2.setOnAction(e -> updateFont());
-        c3.setOnAction(e -> updateFont());
-        cb.setOnAction(e -> updateFont());
-
+        
         Scene sc = new Scene(vb, 300, 300);
         stage.setScene(sc);
         stage.show();
     }
 
-    private void updateFont() {
-        if (c2.isSelected()) {
+    public void handle(ActionEvent ae){
+
+        FontWeight fw = FontWeight.NORMAL;
+        FontPosture fp = FontPosture.REGULAR;
+
+        if(r1.isSelected()){
+            t.setFill(Paint.valueOf("RED"));
+        }
+        if(r2.isSelected()){
+            t.setFill(Paint.valueOf("GREEN"));
+        }
+        if(r3.isSelected()){
+            t.setFill(Paint.valueOf("BLUE"));
+        }
+
+        if(c2.isSelected()){
             fw = FontWeight.BOLD;
-        } else {
-            fw = FontWeight.NORMAL;
         }
-
-        if (c3.isSelected()) {
+        if(c3.isSelected()){
             fp = FontPosture.ITALIC;
-        } else {
-            fp = FontPosture.REGULAR;
         }
 
-        int fontSize = cb.getValue() != null ? cb.getValue() : 10; // Default font size if null
-        t.setFont(Font.font("Times New Roman", fw, fp, fontSize));
+        t.setFont(Font.font("Times New Roman" , fw , fp , cb.getValue()));
+
+
+
     }
 
     public static void main(String args[]) {
