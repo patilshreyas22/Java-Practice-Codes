@@ -18,17 +18,7 @@ public class App extends Application{
         public void start(Stage stage)throws Exception{
 
             b = new Button("Click");
-            b.setOnAction(new EventHandler<ActionEvent>(){
-
-
-                public void handle(ActionEvent ae){
-                    count++;
-                    b.setText("" + count);
-                }
-
-
-
-            });
+            b.setOnAction(e->{count++ ; b.setText("" + count);});
             b.setPrefSize(100 , 30);
 
 
