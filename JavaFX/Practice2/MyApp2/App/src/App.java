@@ -7,7 +7,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 
-public class App extends Application implements EventHandler<ActionEvent>{
+public class App extends Application{
 
 
 
@@ -18,7 +18,17 @@ public class App extends Application implements EventHandler<ActionEvent>{
         public void start(Stage stage)throws Exception{
 
             b = new Button("Click");
-            b.setOnAction(this);
+            b.setOnAction(new EventHandler<ActionEvent>(){
+
+
+                public void handle(ActionEvent ae){
+                    count++;
+                    b.setText("" + count);
+                }
+
+
+
+            });
             b.setPrefSize(100 , 30);
 
 
@@ -34,11 +44,7 @@ public class App extends Application implements EventHandler<ActionEvent>{
         
         }
 
-        public void handle(ActionEvent ae){
-            count++;
-            b.setText("" + count);
-        }
-
+        
 
         public static void main(String args []){
 
