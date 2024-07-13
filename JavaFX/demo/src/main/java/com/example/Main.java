@@ -16,8 +16,10 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void init()throws Exception{
+    public void init()throws Exception{  //this inti method is overriden from the Application class , it has a separate thread from the main thread , this inti method runs before the launch(args) thread launches the application 
+                                        // so basically we can do connections in the init method , before the application starts 
         System.out.println("Before the App Starts");
+        Thread.sleep(5000);
     }
 
 
@@ -57,7 +59,9 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        // System.out.println("Hello world!");
+        
         launch(args);
+
+        System.out.println("After the App is Started");
     }
 }
