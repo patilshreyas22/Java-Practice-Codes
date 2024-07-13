@@ -29,15 +29,21 @@ public class Main extends Application {
 
     @Override
 
-    public void stop(){
-        System.out.println(Thread.currentThread().getName());
-        System.out.println("In The Stop Method");
+    public void stop() {
+        System.out.println("Thread Name " + Thread.currentThread().getName());
+        System.out.println("In The Stop Method"); // this method here is overriden from the application class m it has
+                                                  // the application thread and not the launcher thread which is for the
+                                                  // init method , when the exit button is clicked it calls this method
+                                                  // and does all the cleanup tasks and return to the main method , and
+                                                  // exits the application
 
     }
 
     @Override
 
     public void start(Stage stage) throws Exception {
+
+        Platform.setImplicitExit(false); //this method wont allow us to implicitly exit the application , we have to mannually exit by clikcing on the exit button
 
         VBox vb = new VBox();
 
@@ -54,20 +60,21 @@ public class Main extends Application {
             lb.setText("Welcome to JavaFX Application");
         });
 
-        b1.setOnAction(event->{
+        b1.setOnAction(event -> {
             System.out.println("UI IS BLOCKED");
-            try{
+            try {
                 Thread.sleep(10000);
-            }catch(InterruptedException ie){
+            } catch (InterruptedException ie) {
                 ie.printStackTrace();
             }
         });
 
         b2.setOnAction(e -> {
-            Platform.exit();  //Exiting Explicitly , THis Method here calls the Stop Method whcih is in the Applcation Class
+            Platform.exit(); // Exiting Explicitly , THis Method here calls the Stop Method whcih is in the
+                             // Applcation Class
         });
 
-        vb.getChildren().addAll(b, lb , b1 , b2);
+        vb.getChildren().addAll(b, lb, b1, b2);
 
         System.out.println("Thread Name : " + Thread.currentThread().getName());
         Scene sc = new Scene(vb, 350, 300);
