@@ -16,8 +16,23 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
+    public void init()throws Exception{
+        System.out.println("Before the App Starts");
+    }
+
+
+
+
+
+    @Override
 
     public void start(Stage stage) throws Exception {
+
+        
+
+        
+
+
 
         VBox vb = new VBox();
 
