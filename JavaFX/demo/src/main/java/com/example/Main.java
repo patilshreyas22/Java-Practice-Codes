@@ -1,6 +1,7 @@
 package com.example;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -37,6 +38,7 @@ public class Main extends Application {
         vb.setSpacing(20);
         Button b = new Button("Hello!");
         Button b1 = new Button("Block");
+        Button b2 = new Button("Exit Explicitly");
 
         Label lb = new Label("");
 
@@ -53,7 +55,11 @@ public class Main extends Application {
             }
         });
 
-        vb.getChildren().addAll(b, lb , b1);
+        b2.setOnAction(e -> {
+            Platform.exit();
+        });
+
+        vb.getChildren().addAll(b, lb , b1 , b2);
 
         System.out.println("Thread Name : " + Thread.currentThread().getName());
         Scene sc = new Scene(vb, 350, 300);
