@@ -29,6 +29,14 @@ public class Main extends Application {
 
     @Override
 
+    public void stop(){
+        System.out.println(Thread.currentThread().getName());
+        System.out.println("In The Stop Method");
+
+    }
+
+    @Override
+
     public void start(Stage stage) throws Exception {
 
         VBox vb = new VBox();
@@ -56,7 +64,7 @@ public class Main extends Application {
         });
 
         b2.setOnAction(e -> {
-            Platform.exit();
+            Platform.exit();  //Exiting Explicitly , THis Method here calls the Stop Method whcih is in the Applcation Class
         });
 
         vb.getChildren().addAll(b, lb , b1 , b2);
