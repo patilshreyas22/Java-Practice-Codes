@@ -36,6 +36,7 @@ public class Main extends Application {
         vb.setPadding(new Insets(20, 20, 20, 20));
         vb.setSpacing(20);
         Button b = new Button("Hello!");
+        Button b1 = new Button("Block");
 
         Label lb = new Label("");
 
@@ -43,7 +44,16 @@ public class Main extends Application {
             lb.setText("Welcome to JavaFX Application");
         });
 
-        vb.getChildren().addAll(b, lb);
+        b1.setOnAction(event->{
+            System.out.println("UI IS BLOCKED");
+            try{
+                Thread.sleep(10000);
+            }catch(InterruptedException ie){
+                ie.printStackTrace();
+            }
+        });
+
+        vb.getChildren().addAll(b, lb , b1);
 
         System.out.println("Thread Name : " + Thread.currentThread().getName());
         Scene sc = new Scene(vb, 350, 300);
