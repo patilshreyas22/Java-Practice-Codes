@@ -1,0 +1,2 @@
+I am writing using the BufferedWriter 
+If you give the same name of your class/java program as the name of the pre-defined class , then it shows the duplicate class name Error
