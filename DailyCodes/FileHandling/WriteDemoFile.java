@@ -4,7 +4,7 @@ class Demo{
 
 	public static void main(String args [])throws IOException{
 	
-		FileWriter writer = new FileWriter("WritingFile.txt");
+		FileWriter writer = new FileWriter("file.txt" , true);
 
 		writer.write("Hello , Shreyas This side , I am now OverWriting this File");
 
