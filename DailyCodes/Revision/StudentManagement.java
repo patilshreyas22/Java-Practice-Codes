@@ -86,7 +86,7 @@ class Controls extends OpeningPage{
 		
 		Attendance attper = new Attendance();
 
-				
+		
 		switch(choice){
 			
 			case 0:
@@ -111,7 +111,7 @@ class Controls extends OpeningPage{
 				Running = false;
 				System.out.println("                   Exiting the App               ");
 				break;
-		
+	
 		}		
 		
 	    }
