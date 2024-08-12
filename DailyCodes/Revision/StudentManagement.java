@@ -18,6 +18,8 @@ class OpeningPage{
 
 	System.out.println("                   3) Fees                               ");
 
+	System.out.println("                   4) Exit                               ");
+
 	System.out.print("                   Enter your Choice : ");
 
 	
@@ -30,6 +32,37 @@ class OpeningPage{
 	}
 
 }
+class Attendance{
+
+
+	public void AttendancePercentage(int percentage){
+		
+		System.out.println("                   Your Percentage is " + percentage + "% ");
+
+		if(percentage>0 && percentage<100){
+
+			if(percentage<75){
+			
+				System.out.println("                   You are not eligible for Exams");
+		
+			}else{
+			
+				System.out.println("                   You are eligible for Exams");
+			
+			}
+		}else{
+			
+			System.out.println("Invalid Percentage");
+		
+		} 
+
+	
+	}
+
+
+
+}
+
 class Controls extends OpeningPage{
 
 	Controls(){
@@ -40,12 +73,18 @@ class Controls extends OpeningPage{
 	
 	
 		Scanner sc = new Scanner(System.in);
+
+		boolean Running = true;
+
+	while(Running == true){
 	
 		Controls controls = new Controls();
 
 		int choice = sc.nextInt();
 
 		OpeningPage ChoicePass = new OpeningPage(choice);
+		
+		Attendance attper = new Attendance();
 
 				
 		switch(choice){
@@ -55,10 +94,20 @@ class Controls extends OpeningPage{
 				StudentName obj = new StudentName();
 				obj.register();		
 				break;
+
+			case 1:
+				attper.AttendancePercentage(77);
+				break;
+
+
+			case 4:
+				Running = false;
+				System.out.println("                   Exiting the App               ");
+				break;
 		
 		}		
 		
-		
+	    }
 	
 	}
 }
