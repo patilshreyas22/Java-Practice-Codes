@@ -1,5 +1,6 @@
 import java.util.*;
-import StudentData;
+import java.io.*;
+import Student.StudentFile;
 
 class OpeningPage{
 	
@@ -35,7 +36,7 @@ class Controls extends OpeningPage{
 		
 		super();
 	}
-	public static void main(String args []){
+	public static void main(String args [])throws IOException{
 	
 	
 		Scanner sc = new Scanner(System.in);
