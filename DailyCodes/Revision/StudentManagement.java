@@ -1,6 +1,6 @@
+import StudentData.Names.*;
 import java.util.*;
 import java.io.*;
-import Student.StudentFile;
 
 class OpeningPage{
 	
@@ -47,14 +47,13 @@ class Controls extends OpeningPage{
 
 		OpeningPage ChoicePass = new OpeningPage(choice);
 
-		StudentFile SF = new StudentFile();
-
-		
+				
 		switch(choice){
 			
 			case 0:
 				
-				SF.register();
+				StudentName obj = new StudentName();
+				obj.register();		
 				break;
 		
 		}		
