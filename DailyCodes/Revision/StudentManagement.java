@@ -99,6 +99,13 @@ class Controls extends OpeningPage{
 				attper.AttendancePercentage(77);
 				break;
 
+			case 3:
+				FeeControls FeeObj = new FeeControls();
+				FeeObj.main(new String[0]); //here you are calling a main method from another class of another java file , but remember , 
+							    //you have to pass a empty String while calling
+					       		    //the main method of any other class , reason is straight forward " PUBLIC STATIC VOID MAIN(STRING ARGS []) "
+				break;
+
 
 			case 4:
 				Running = false;
