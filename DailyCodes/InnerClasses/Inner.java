@@ -1,5 +1,6 @@
 class Outer{
 
+
 	
 	int x = 10;
 
@@ -32,7 +33,11 @@ class Outer{
 
 	public static void main(String args []){
 	
-		Outer obj = new Outer().new Inner();
+		Outer obj = new Outer().new Inner(); // incompatible types: Outer.Inner cannot be converted to Outer
+						     // so basically the INNER CLASS is NON-STATIC so we need to make its object by tying it to the object of OUTER CLASS
+						     // the non-static inner class must be associated with an instance of the 'Outer' class 
+						     // This is because a non-static inner class inherently has access to the instance (Non - static) and Static as well variables
+						     //  and methods of its enclosing 'Outer' class
 
 	}
 
