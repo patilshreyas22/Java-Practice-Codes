@@ -7,11 +7,11 @@ class PrioQue{
 		
 		PriorityQueue que = new PriorityQueue();
 
-		que.offer(10);
-		que.offer(20);
-		que.offer(30);
-		que.offer(40);
-		que.offer(50);
+		que.offer(70);
+		que.offer(110);
+		que.offer(90);
+		que.offer(85);
+		que.offer(62);
 
 	//	System.out.println("Insertion Order : 10 , 30 , 50 , 40 , 20");
 
@@ -19,7 +19,7 @@ class PrioQue{
 
 		que.poll();
 
-		System.out.println(que);
+	System.out.println(que);
 	
 	
 	}
