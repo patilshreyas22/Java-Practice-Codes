@@ -24,7 +24,7 @@ class factor{
 		System.out.println("Invalid Number");
 	}
 
-	return number;
+	return count;
 	
 }
 	
