@@ -7,7 +7,12 @@ class OptimizedApproach{
 		
 		long count = 2;
 
-		for(int i = 2 ; i<=Math.sqrt(number) ; i++){
+		for(int i = 2 ; i<=Math.sqrt(number) ; i++){ //as we all know that pushing a method's stack is a heavy operation for jvm , as a result 
+							     //instead of using the sqrt method of Math class we can write it as " i*i = number "
+		//for(int i = 2 ; i*i<=number ; i++)
+							     //this will make the code even more optimized and fast
+							    
+							     
 			
 			if(number%i==0){
 				
