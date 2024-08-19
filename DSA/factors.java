@@ -2,15 +2,15 @@ import java.util.*;
 
 class factor{
 		
-	static int count = 0;
+	static long count = 0;
 	
-	static int check(int number){
+	static long check(long number){
 		
 		if(number>0){
-		for(int i = 1 ; i<=number ; i++){
+		for(long i = 1 ; i<=number ; i++){
 			
 			if(number%i==0){
-				
+				System.out.println(i + " is a factor of " + number);	
 				count++;
 			
 			}
@@ -36,7 +36,7 @@ class factor{
 
 		System.out.println("Enter a number :");
 
-		int number = sc.nextInt();
+		long number = sc.nextLong();
 
 		check(number);
 
