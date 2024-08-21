@@ -4,13 +4,17 @@ class root{
 		
 		int val = 0;
 		
-		for(int i = 1 ; i*i<=number ; i++){ // here the iterations count will be equal to the square root of the number 
+		for(int i = 1 ; i<=number ; i++){ // here the iterations count will be equal to the square root of the number 
 			
 			itr++;
 
 			if(i*i<=number){
 				
 				val = i;
+			
+			}else{
+				
+				break;
 			
 			}
 		
