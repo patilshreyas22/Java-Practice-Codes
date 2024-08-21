@@ -18,18 +18,18 @@ class client{
 			return a -b;
 		}else if(a==0){
 			
-			return a + b ;  //here i have covered every case for a but still it will throw a MISSING RETURN STATEMENT error
+		return a + b;	  //here i have covered every case for a but still it will throw a MISSING RETURN STATEMENT error
 		
 		}
 
-		return a;		
+		return a;	// this return statement will never be reached as we have covered all the possible if cases for 'a' , but this return statement satisfies the compiler 	
 
 			
 	}
 
 	public static void main(String args []){
 		
-		System.out.println(operations(5 , 4));
+		System.out.println(operations(0 , 4));
 	
 	}
 
