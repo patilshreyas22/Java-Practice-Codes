@@ -4,7 +4,7 @@ class root{
 		
 		int val = 0;
 		
-		for(int i = 1 ; i<=number ; i++){ 
+		for(int i = 1 ; i*i<=number ; i++){ // here the iterations count will be equal to the square root of the number 
 			
 			itr++;
 
@@ -12,11 +12,11 @@ class root{
 				
 				val = i;
 			
-			}else{
-				
-				break; 	//here whenever the square becomes bigger than the number itself , the break statement will be triggered and it will return the latest value in val
-			
 			}
+				
+				
+			
+			
 		
 		}
 
