@@ -27,7 +27,7 @@ class root{
 
 	public static void main(String args []){
 			
-		System.out.println("Square root : " + operations(100));
+		System.out.println("Square root : " + operations(85));
 
 		System.out.println("Total Iterations : " + itr);
 	
