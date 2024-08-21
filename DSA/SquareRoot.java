@@ -10,7 +10,8 @@ class client{
 		int root = 0;
 		for(int i = 1 ; i<=number ; i++){
 			
-			if(i*i==number){
+			if(i*i<=number){  // here first it was , i*i==number , which works only for perfect square
+					  // if you write i*i <= number , then it is for any number , the square root of closest perfect square will be stored in root
 				
 				root = i;
 			
