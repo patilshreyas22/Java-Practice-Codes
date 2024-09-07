@@ -2,15 +2,17 @@ import java.util.*;
 class client{
 	
 	static int operations(int start , int end){
-		
+	
+		int itr = 0;	
 		int count = 2;
 		for(int i = start+1 ; i<end ; i++){
-		
+			itr++;
 			count++;
 
 		
 		}
-	
+		
+		System.out.println("Total Iterations : " + itr);
 		return count;
 	}
 
