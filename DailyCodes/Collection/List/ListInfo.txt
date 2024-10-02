@@ -10,3 +10,7 @@ why use List : Dynamic Resizing , Methods : add() , remove() , get() simplify th
 
 If the size of the collection is unknown or may change during runtime , you should use a list , LISTS automatically resize as you add or remove elements , unlike arrays which have a fixed 
 size
+
+the default capacity of the ArrayList is 10
+
+The ArrayList class belongs to the UTIL PACKAGE of Java
