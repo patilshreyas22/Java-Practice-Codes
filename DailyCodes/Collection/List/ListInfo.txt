@@ -4,4 +4,9 @@ Insertion Order is Preserved
 
 ArrayList Capacity Increases as : newCapacity = oldCapacity * 3/2
 
+List is an INTERFACE , so you need to use its reference and some other class's object : ArrayList , LinkedList , Vector , Stack
 
+why use List : Dynamic Resizing , Methods : add() , remove() , get() simplify the element management , index-based accessing , iterator support 
+
+If the size of the collection is unknown or may change during runtime , you should use a list , LISTS automatically resize as you add or remove elements , unlike arrays which have a fixed 
+size
