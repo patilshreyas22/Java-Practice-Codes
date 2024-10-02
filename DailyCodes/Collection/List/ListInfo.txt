@@ -1,0 +1,7 @@
+Allows Duplicate Data
+
+Insertion Order is Preserved
+
+ArrayList Capacity Increases as : newCapacity = oldCapacity * 3/2
+
+
