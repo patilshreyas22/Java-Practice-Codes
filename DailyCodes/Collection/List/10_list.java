@@ -25,7 +25,13 @@ class ListDemo{
 
 		System.out.println(list); //whole list
 
+		list.remove(5);
+
+		System.out.println(list.get(5)); //N
 		
+		System.out.println(list.contains(42.53)); //false
+
+	
 		list.clear();
 
 		System.out.println(list.isEmpty()); //true
