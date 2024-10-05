@@ -12,3 +12,9 @@ When a Vector needs to grow , it doubles its size , while ArrayList increases it
 Vecotr like ArrayList provides O(1) access time to access elements due to its array-based structure
 
 Use Vector only if you need Synchronization , if you dont need thread safety , you should prefer ArrayList for its better performance
+
+For better performance in multi-threaded applications , use Collections.synchronizedList() with an ArrayList instead of a Vector
+
+ArrayList is generally faster than Vector because it is not synchronized by default 
+
+Synchrnoization adds overhead , making Vector slower than ArrayList in single-threaded scenarios 
