@@ -1,0 +1,14 @@
+Vector is a legacy class in Java that implements the List Interface and is part of the Java Collection Framework
+
+It is similar to the ArrayList but has some important differences , primarily related to Synchronization and how it grows dynamically.It was part of the Original Java 1.0 and while it is 
+still available for use , it is generally recommended to use the ArrayList unless you specifically need THREAD SAFETY 
+
+Key Features : Resizing using dynamic array , the size of the array grows automatically as elements are added
+	       Synchronized : all methods in vector are synchronized,which means they are thread-safe.this makes vector suitable for multi=threaded environments where multiple threads might
+			      access and modify the list concurrently 
+
+When a Vector needs to grow , it doubles its size , while ArrayList increases its size by 50% . This means Vector may waste more memory than ArrayList in some cases
+
+Vecotr like ArrayList provides O(1) access time to access elements due to its array-based structure
+
+Use Vector only if you need Synchronization , if you dont need thread safety , you should prefer ArrayList for its better performance
