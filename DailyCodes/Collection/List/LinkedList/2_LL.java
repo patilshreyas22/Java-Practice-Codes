@@ -19,7 +19,7 @@ class LinkedListMethods{
 
 		System.out.println("LinkedList : " + ll);
 
-		System.out.println("First Element : " + ll.getFirst());
+		System.out.println("First Element : " + ll.getFirst()); //The getFirst Element throws an exception if there is no element at the first position of LinkedList
 		
 		System.out.println("Last Element : " + ll.getLast());
 
