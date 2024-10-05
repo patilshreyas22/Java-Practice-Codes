@@ -1,0 +1,14 @@
+LinkedList is an implementation of the List and Deque Interfaces
+
+It is a data structure that consists of a sequence of elements where each element contains a reference(pointer) to the next and previous element(node) allowing for efficient insertions and
+deletions
+
+Size of LinkedList can grow and shrink dynamically as elements are added or removed 
+
+Node-Based Data Structure : Each element in a LinkedList is stored in a node , which contains : 1) Data 2) Reference to the next node (and possibly the previous node in a doubly LinkedList)
+
+Memory Efficiency : LinkedList is more memory efficient for large datasets that require frequent insertions and deletions , as it doesnt require resizing as an ArrayList does
+
+USE CASES :
+
+LinkedList implements both the queue and deque interfaces , making it suitable for use as a queue or stack 
