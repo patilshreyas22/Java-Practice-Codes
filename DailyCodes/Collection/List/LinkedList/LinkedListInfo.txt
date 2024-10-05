@@ -11,4 +11,6 @@ Memory Efficiency : LinkedList is more memory efficient for large datasets that 
 
 USE CASES :
 
-LinkedList implements both the queue and deque interfaces , making it suitable for use as a queue or stack 
+LinkedList implements both the queue and deque interfaces , making it suitable for use as a queue or stack
+
+LinkedList is based on a doubly Linked List structre , which allows for efficient insertions and deletions but has slower access times (O(n) for accessing elements) 
