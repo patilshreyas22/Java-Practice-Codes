@@ -1,0 +1,9 @@
+The iterator interface in Java is a universal cursor that provides a way to iterate over elements in a collection , regardless of the underlying data structure. its a part of the java
+collection framework and is present in the java.util package . The Iterator acts as a universal cursor because it provides a common way to traverse elements in a different types 
+of collections , such as lists , sets and maps 
+
+methods : boolean hasNext() : returns true if there are more elements to iterate over
+	  
+	  E next() : Returns the next element in the iteration 
+
+	  void remove() : Removes the last element returned by next() from the underlying collection.This method is optional and may not be supported by all collections 
