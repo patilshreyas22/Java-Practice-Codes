@@ -6,4 +6,6 @@ methods : boolean hasNext() : returns true if there are more elements to iterate
 	  
 	  E next() : Returns the next element in the iteration 
 
-	  void remove() : Removes the last element returned by next() from the underlying collection.This method is optional and may not be supported by all collections 
+	  void remove() : Removes the last element returned by next() from the underlying collection.This method is optional and may not be supported by all collections
+
+if the remove() method is used before next() method or after calling remove() without a subsequent next() , it throws a "IllegalStateException" 
