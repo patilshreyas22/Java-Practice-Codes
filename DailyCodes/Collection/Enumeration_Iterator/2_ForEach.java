@@ -19,7 +19,7 @@ class ForEachDemo{
 
 		System.out.println(al);
 
-
+		//The data type is heterogeneous type in this case , hence the object is used in for-each loop
 		
 
 		for(Object x:al){
