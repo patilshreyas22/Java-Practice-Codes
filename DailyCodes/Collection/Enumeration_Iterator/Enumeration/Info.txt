@@ -1,0 +1,14 @@
+Enumeration interface is part of the legacy java Collections Framework and is used for iterating over a collection of objects. it was a precursor to the more powerful and flexible iterator
+interface introduced later .
+
+The enumeration interface is defined in the java.util package 
+
+The enumeration interface has two main methods : 
+
+1) boolean hasMoreElements() : Returns true if there are more elements to iterate over
+
+2) Object nextElement() : Returns the next element in the enumeration 
+
+Enumeration is often used with older collection classes like vector and hashtable . it provides a way to iterate over elements without the ability to modify the collection during iteration
+
+Limitations : Unlike the iterator interface , Enumeration has fewer methods and does not support the removal of elements during iteration. its a read-only interface for traversing elements 
