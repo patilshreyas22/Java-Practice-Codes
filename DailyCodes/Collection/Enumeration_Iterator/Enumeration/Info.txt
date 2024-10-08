@@ -11,4 +11,6 @@ The enumeration interface has two main methods :
 
 Enumeration is often used with older collection classes like vector and hashtable . it provides a way to iterate over elements without the ability to modify the collection during iteration
 
-Limitations : Unlike the iterator interface , Enumeration has fewer methods and does not support the removal of elements during iteration. its a read-only interface for traversing elements 
+Limitations : Unlike the iterator interface , Enumeration has fewer methods and does not support the removal of elements during iteration. its a read-only interface for traversing elements
+
+Iterator allows removal of elements using the remove() method , enumeration does not provide any method to remove elements  
