@@ -22,11 +22,11 @@ public class BoyGirl{
 
 		if(uniquewords.size()%2==0){
 			
-			System.out.println("CHAT WITH HER !");
+			System.out.println("CHAT WITH HER!");
 		
 		}else{
 			
-			System.out.println("IGNORE HIM !");
+			System.out.println("IGNORE HIM!");
 		
 		}
 	
