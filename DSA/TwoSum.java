@@ -13,11 +13,13 @@ class demo{
 
 		int count = 0;
 
+		int itr = 0;
+
 		for(int i = 0 ; i<N ; i++){
 			
-			for(int j = 0 ; j<N ; j++){
+			for(int j = i+1 ; j<N ; j++){
 			
-				
+				itr++;
 				if(arr[i] + arr[j] == K && arr[i] != arr[j]){
 					
 					count++;
@@ -29,7 +31,8 @@ class demo{
 		
 		}
 
-		System.out.println(count);
+		System.out.println(count*2);
+		System.out.println(itr);
 
 	
 	}
