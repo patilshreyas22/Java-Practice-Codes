@@ -1,3 +1,4 @@
+//tc : O(N^2)
 import java.util.*;
 
 class demo{
