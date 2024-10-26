@@ -1,3 +1,5 @@
+//tc : O(N^2) NOT EXACTLY N^2 BUT AROUND IT
+
 import java.util.*;
 
 class BruteForceGreaterElement{

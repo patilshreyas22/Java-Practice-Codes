@@ -1,11 +1,14 @@
+//tc : O(N)
+
 class demo{
+	
 	
 	public static void main(String args []){
 		
 		int N = 10;
 		int arr [] = new int [] {2 , 3 , 2 , 12 , 8, 12 , 8 , 1 , 7 , 8};
 		
-		int max = arr[0];
+		int max = Integer.MIN_VALUE;
 
 		int count = 0;
 
